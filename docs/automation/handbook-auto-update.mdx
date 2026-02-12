@@ -1,0 +1,35 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# 每日 Handbook 自動更新
+
+## 自動從對話記錄中提取應用案例
+
+**日期**：2026-02-12
+**需求者**：工程師 A
+**平台**：Google Chat
+
+### 情境
+為了讓應用手冊持續更新，工程師 A 希望蝦蝦每天自動回顧當天所有對話，找出新的應用案例，按照 handbook 寫入規範加入手冊，並同步更新網站。
+
+### 過程
+1. 設定 cron 排程，每天凌晨 4:00 執行
+2. 列出當天所有活躍的 session
+3. 逐一檢視每個 session 的對話內容
+4. 辨識出新的應用案例（使用者請蝦蝦完成的任務）
+5. 按照 handbook AGENTS.md 的寫入規範，寫入對應分類的 .md 檔
+6. 所有內容去識別化：真實姓名改用角色代稱，移除 email、user ID
+7. 同步更新 handbook-site，執行 build → restart server → 連結測試
+
+### 結果
+- 排程成功建立，每天凌晨 4:00 自動執行
+- 新案例自動寫入 handbook 並部署到網站
+- 內容完全去識別化，保護個資
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">現在跑一次 handbook 更新</ChatBubble>
+  <ChatBubble from="bot">收到！正在回顧今天的對話，找出新的應用案例並更新手冊... 📖</ChatBubble>
+</ChatDemo>
+
+此為自動化背景任務（每天凌晨 4:00 自動執行），也可手動觸發。

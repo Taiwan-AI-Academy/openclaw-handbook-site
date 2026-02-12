@@ -1,0 +1,29 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# 輿情監控
+
+## 每日輿情監控
+
+**日期**：2026-02 起運作中
+**需求者**：LINE 使用者（可能是使用者）
+**平台**：LINE
+
+### 情境
+需要每日追蹤「台灣人工智慧學校」、「AI Safety」、「AI Governance」等關鍵字的網路輿情。
+
+### 過程
+1. 設定 cron 排程，每日 7:00 執行
+2. 搜尋網路上相關關鍵字的最新報導和討論
+3. 整理成摘要格式
+4. 透過 LINE Push API 發送給指定使用者
+
+### 結果
+- 每日 7:00 自動發送輿情摘要到 LINE
+- 涵蓋新聞、社群媒體、論壇等來源
+
+### 使用方式
+
+<ChatDemo platform="line">
+  <ChatBubble from="user">幫我設定輿情監控，追蹤「台灣人工智慧學校」</ChatBubble>
+  <ChatBubble from="bot">好的！已設定每日 7:00 監控，會搜尋相關新聞和社群討論，整理成摘要發給你 📰</ChatBubble>
+</ChatDemo>

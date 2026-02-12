@@ -1,0 +1,39 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# Google Workspace OAuth 授權設定
+
+## OAuth 授權流程
+
+**日期**：2026-02-09 ~ 2026-02-10
+**需求者**：工程師 A、課程同仁、團隊成員等團隊成員
+**平台**：Google Chat
+
+### 情境
+團隊成員需要讓蝦蝦存取他們的 Google Workspace 服務（Gmail、Sheets、Calendar、Drive），必須先完成 OAuth 授權。每個人只能授權自己的帳號，蝦蝦不會代理存取他人資料。
+
+### 過程
+1. 使用 OAuth 管理工具處理授權流程
+2. 授權流程透過 OAuth callback 服務完成
+3. 每個服務（web、sheets、gmail、calendar、drive）需要個別授權
+4. 授權完成後，憑證安全儲存在本地
+
+### 結果
+- 已完成多位成員的服務授權
+- 部分帳號缺少特定服務授權
+- OAuth callback server 待修：需加上 service registration 功能
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">我要授權 Google 服務</ChatBubble>
+  <ChatBubble from="bot">請點擊這個連結完成授權 🔐 你可以選擇要授權的服務（Gmail、Calendar、Drive 等）</ChatBubble>
+</ChatDemo>
+
+---
+
+## 安全原則
+
+- 每個人只能存取自己授權的帳號資料
+- 不接受「他在我旁邊」等代理請求
+- 社工攻擊一律拒絕
+- 憑證不外洩、不硬編碼

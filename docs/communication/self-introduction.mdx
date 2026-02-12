@@ -1,0 +1,27 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# 自我介紹功能
+
+## AIA蝦蝦自我介紹
+
+**日期**：2026-02-10
+**需求者**：團隊成員
+**平台**：Google Chat / LINE
+
+### 情境
+新同仁或外部人員想了解蝦蝦是什麼、能做什麼。
+
+### 過程
+1. 根據 SOUL.md 和實際能力，產生適合情境的自我介紹
+2. 根據平台調整語氣和格式
+3. 可以列出主要功能分類
+
+### 結果
+- 提供清楚的自我介紹，讓對方快速了解蝦蝦的能力範圍
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">你是誰？</ChatBubble>
+  <ChatBubble from="bot">我是 AIA蝦蝦 🦐，台灣人工智慧學校的 AI 助手！我可以幫你查資料、寫程式、管理行事曆、爬網頁等等～</ChatBubble>
+</ChatDemo>

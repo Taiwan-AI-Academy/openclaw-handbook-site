@@ -1,0 +1,54 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# Google Sheets 讀取
+
+## 校友名單讀取
+
+**日期**：2026-02-10
+**需求者**：工程師 A
+**平台**：Google Chat
+
+### 情境
+工程師 A需要讀取「LLM初十期_學員名單.xlsx」Google Sheets 中的「給工程師 A校友名單42」分頁，轉成 CSV 格式匯入校友系統。
+
+### 過程
+1. 使用 `gog` CLI 的 sheets 功能讀取指定試算表
+2. 解析分頁內容，提取 studentid、username、email 等欄位
+3. 發現工程師 A帳號 xxx@example.com 缺少 sheets OAuth 授權，無法存取
+
+### 結果
+- 因授權不足暫時無法完成
+- 同時發現校友匯入 Python 腳本有兩個 bug（變數名錯誤、計數器重置問題）
+- 建議工程師 A先完成 sheets 授權或提供 CSV 檔
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">幫我讀這個 Google Sheets，轉成 CSV</ChatBubble>
+  <ChatBubble from="bot">收到！正在讀取試算表... 請確認你的帳號已授權 sheets 服務 📊</ChatBubble>
+</ChatDemo>
+
+---
+
+## CIA 評分標準讀取
+
+**日期**：2026-02-10
+**需求者**：工程師 A
+**平台**：Google Chat
+
+### 情境
+工程師 A想了解 CIA（機密性/完整性/可用性）的評分標準，資料在一份 Google Sheets 中。
+
+### 過程
+1. 嘗試用 gog 讀取指定試算表
+2. 因帳號缺少 sheets 和 drive 授權，且檔案非公開，無法存取
+
+### 結果
+- 無法存取，建議授權 sheets 服務、設公開連結、或直接貼內容
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">幫我讀這份 CIA 評分標準的 Sheets</ChatBubble>
+  <ChatBubble from="bot">需要你先授權 sheets 服務才能存取喔！請先完成 OAuth 授權 🔑</ChatBubble>
+</ChatDemo>

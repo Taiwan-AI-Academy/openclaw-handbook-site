@@ -1,0 +1,28 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# 行事曆每日提醒
+
+## AIA_STED 行事曆提醒
+
+**日期**：2026-02 起運作中
+**需求者**：課程同仁
+**平台**：Google Chat
+
+### 情境
+團隊需要每天早上收到當日行事曆事件提醒，避免遺漏會議或截止日。
+
+### 過程
+1. 設定 cron 排程，每日 8:30 執行
+2. 透過 Google Calendar API 讀取 AIA_STED 行事曆當日事件
+3. 整理成摘要格式，發送到課程同仁的 Google Chat
+
+### 結果
+- 每日 8:30 自動發送當日行程提醒
+- 目前運作中
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">幫我設定每日行事曆提醒</ChatBubble>
+  <ChatBubble from="bot">好的！已設定每天 8:30 自動發送當日行程提醒 📅 請確認已完成 Google Calendar OAuth 授權。</ChatBubble>
+</ChatDemo>

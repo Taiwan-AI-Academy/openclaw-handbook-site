@@ -1,0 +1,37 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# LINE 語音訊息
+
+## TTS → M4A → LINE Push
+
+**日期**：2026-02-10
+**需求者**：LINE 使用者
+**平台**：LINE
+
+### 情境
+使用者希望蝦蝦用語音回覆 LINE 訊息，而非純文字。
+
+### 過程
+1. 使用 TTS（文字轉語音）生成音訊
+2. 將音訊轉換為 M4A 格式（LINE 僅支援 M4A）
+3. 存放到媒體目錄
+4. 透過媒體服務提供 HTTPS 公開 URL
+5. 使用 LINE Push API 發送語音訊息，需帶 duration（毫秒）
+
+### 結果
+- 成功實現 LINE 語音訊息回覆
+- 音訊品質良好，像真人對話
+
+### 使用方式
+
+<ChatDemo platform="line">
+  <ChatBubble from="user">🎤（語音訊息）</ChatBubble>
+  <ChatBubble from="bot">🔊（語音回覆）收到你的語音訊息！我也用語音回覆你～</ChatBubble>
+</ChatDemo>
+
+也可以文字對話時要求「用語音回我」。
+
+### 技術備註
+- 格式必須是 M4A（不能用 MP3）
+- 需要 HTTPS 公開 URL
+- 需要帶 duration 參數（毫秒）

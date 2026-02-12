@@ -1,0 +1,55 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# 天氣與交通查詢
+
+## 天氣查詢（LINE 語音問答）
+
+**日期**：2026-02-10
+**需求者**：LINE 使用者
+**平台**：LINE
+
+### 情境
+使用者透過 LINE 語音訊息詢問天氣狀況，希望蝦蝦用語音回覆。
+
+### 過程
+1. 接收 LINE 語音訊息，透過 Whisper 語音辨識轉文字
+2. 查詢天氣資訊（氣象 API 或網頁搜尋）
+3. 將回覆透過 TTS 轉語音（M4A 格式）
+4. 透過 LINE Push API 回傳語音訊息
+
+### 結果
+- 完成語音對語音的天氣問答
+- 使用者體驗：像跟真人對話一樣
+
+### 使用方式
+
+<ChatDemo platform="line">
+  <ChatBubble from="user">今天天氣怎麼樣？</ChatBubble>
+  <ChatBubble from="bot">台北目前 18°C，多雲 ☁️ 下午有機會下雨，記得帶傘！</ChatBubble>
+</ChatDemo>
+
+---
+
+## 交通建議（高鐵時刻）
+
+**日期**：2026-02-10
+**需求者**：團隊成員
+**平台**：Google Chat / LINE
+
+### 情境
+需要查詢高鐵時刻表或交通路線建議。
+
+### 過程
+1. 搜尋高鐵時刻表或交通資訊
+2. 根據出發地、目的地、時間提供建議
+3. 整理成易讀格式回覆
+
+### 結果
+- 提供適合的班次和轉乘建議
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">幫我查台北到高雄的高鐵</ChatBubble>
+  <ChatBubble from="bot">最近的班次是 14:05 出發，16:01 到高雄左營 🚄 標準車廂 $1,490</ChatBubble>
+</ChatDemo>

@@ -1,0 +1,30 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# LINE 五子棋遊戲
+
+## 圖片棋盤互動五子棋
+
+**日期**：2026-02-10
+**需求者**：LINE 使用者
+**平台**：LINE
+
+### 情境
+使用者想在 LINE 上跟蝦蝦玩五子棋。
+
+### 過程
+1. 使用者說「下五子棋」啟動遊戲
+2. 蝦蝦生成棋盤圖片（使用程式繪製）
+3. 每一步棋都重新繪製棋盤圖片，透過 LINE 發送
+4. 使用者用座標（如 H8）下棋
+5. 蝦蝦計算 AI 的回應步並更新棋盤
+
+### 結果
+- 在 LINE 上實現了可視化的五子棋對弈
+- 透過圖片棋盤讓使用者直觀看到局面
+
+### 使用方式
+
+<ChatDemo platform="line">
+  <ChatBubble from="user">來下五子棋</ChatBubble>
+  <ChatBubble from="bot">好啊！棋盤準備好了，你先下 ⚫ 請輸入座標（例如 H8）</ChatBubble>
+</ChatDemo>

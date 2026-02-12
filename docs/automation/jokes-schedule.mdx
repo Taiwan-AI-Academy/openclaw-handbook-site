@@ -1,0 +1,27 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# 程式設計師笑話排程
+
+## 定時笑話推送
+
+**日期**：2026-02-10
+**需求者**：團隊成員
+**平台**：Google Chat / LINE
+
+### 情境
+想在固定時間收到程式設計師相關的笑話，增加團隊歡樂氣氛。
+
+### 過程
+1. 設定 cron 排程，在指定時間執行
+2. 生成或搜尋程式設計師笑話
+3. 推送到指定頻道
+
+### 結果
+- 定時發送笑話，活絡團隊氣氛
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">每天下午茶時間講個程式笑話</ChatBubble>
+  <ChatBubble from="bot">沒問題！已設定排程，每天下午會推送一則程式設計師笑話到頻道 😄</ChatBubble>
+</ChatDemo>
