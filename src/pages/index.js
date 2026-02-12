@@ -5,39 +5,41 @@ import { ChatDemo, ChatBubble } from '../components/ChatBubble';
 
 const highlights = [
   {
-    title: '🌤️ 天氣與交通查詢',
-    path: '/docs/information/weather-traffic',
-    tag: '資訊',
-    platform: 'line',
-    chat: [
-      { from: 'user', text: '今天天氣怎麼樣？' },
-      { from: 'bot', text: '台北目前 18°C，多雲 ☁️ 下午有機會下雨，記得帶傘！' },
-    ],
-  },
-  {
-    title: '📅 行事曆每日提醒',
-    path: '/docs/google-workspace/calendar-reminders',
-    tag: 'Google Workspace',
+    title: '💻 課程網站建置',
+    path: '/docs/development/course-website',
+    tag: '開發',
     platform: 'gchat',
     chat: [
-      { from: 'bot', text: '📅 今日行程：\n10:00 部門週會\n14:00 廠商會議' },
+      { from: 'user', text: '幫我用這份 Google Doc 建課程網站' },
+      { from: 'bot', text: '完成了！八大區塊全部照原文放進去，設計風格不動 ✅' },
     ],
   },
   {
-    title: '📰 輿情監控',
-    path: '/docs/automation/sentiment-monitoring',
+    title: '🎙️ 會議錄影自動轉錄',
+    path: '/docs/automation/meeting-transcription',
     tag: '自動化',
-    platform: 'line',
+    platform: 'gchat',
     chat: [
-      { from: 'bot', text: '🔍 今日 AI 相關新聞摘要已送出，共找到 5 則重點報導。' },
+      { from: 'bot', text: '📝 會議記錄整理好了！Google Doc 連結已送出，含 8 項行動項目。' },
+    ],
+  },
+  {
+    title: '📰 科技新聞摘要',
+    path: '/docs/information/news-summary',
+    tag: '資訊',
+    platform: 'gchat',
+    chat: [
+      { from: 'user', text: '摘要一下 Chrome WebMCP 早期預覽' },
+      { from: 'bot', text: '簡單說：以後網站不只給人看，也給 AI 用 🤖🌐' },
     ],
   },
 ];
 
 const categories = [
-  { name: 'Google Workspace', icon: '🔧', count: 3, desc: 'OAuth 授權、Sheets 讀取、行事曆提醒', path: '/docs/category/-google-workspace' },
-  { name: '資訊查詢', icon: '📡', count: 3, desc: '天氣交通、生命靈數、食譜、旅遊建議', path: '/docs/category/-資訊查詢' },
-  { name: '自動化', icon: '⚡', count: 3, desc: '輿情監控、版本檢查、排程任務', path: '/docs/category/-自動化' },
+  { name: 'Google Workspace', icon: '🔧', count: 4, desc: 'OAuth 授權、Sheets 讀取、行事曆提醒、Gmail 自動回覆', path: '/docs/category/-google-workspace' },
+  { name: '資訊查詢', icon: '📡', count: 4, desc: '天氣交通、生命靈數、食譜、新聞摘要', path: '/docs/category/-資訊查詢' },
+  { name: '自動化', icon: '⚡', count: 7, desc: '輿情監控、會議轉錄、NotebookLM、排程任務', path: '/docs/category/-自動化' },
+  { name: '開發', icon: '💻', count: 1, desc: '課程網站建置', path: '/docs/category/-開發' },
   { name: '通訊', icon: '💬', count: 2, desc: 'LINE 語音訊息、跨平台溝通', path: '/docs/category/-通訊' },
   { name: '娛樂', icon: '🎮', count: 1, desc: 'LINE 五子棋對戰遊戲', path: '/docs/category/-娛樂' },
 ];

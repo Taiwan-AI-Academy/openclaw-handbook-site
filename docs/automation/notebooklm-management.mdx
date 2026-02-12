@@ -1,0 +1,39 @@
+---
+sidebar_label: NotebookLM 多使用者管理
+title: NotebookLM 多使用者管理
+---
+
+## 建立 NotebookLM 多使用者隔離機制
+
+**日期**：2026-02-12
+**需求者**：工程師 A
+**平台**：Google Chat
+
+### 情境
+
+團隊多人需要透過蝦蝦操作 Google NotebookLM（查閱 notebook、列出清單、刪除等），但 NotebookLM 的 session 預設是共用的，可能導致 A 的 notebook 被 B 看到。需要建立使用者隔離機制。
+
+### 過程
+
+1. 建立多使用者管理腳本，每個使用者有獨立的 session、context 和 browser profile
+2. 設定使用者對應表（根據聊天平台的使用者 ID 自動辨識身份）
+3. Google Chat 訊息進來時，自動匹配對應的 NotebookLM session
+4. 為每位使用者建立獨立的儲存目錄
+
+### 結果
+
+成功建立完全隔離的多使用者 NotebookLM 管理系統：
+- 每人登入自己的 Google 帳號
+- Session 和資料完全獨立
+- 從 Google Chat 操作時自動辨識身份
+- 可列出、查閱、刪除自己的 notebook
+
+### 使用方式
+
+> 「蝦蝦，列出我的 NotebookLM notebooks」
+> 「蝦蝦，幫我刪除那個『XXX』notebook」
+> 「蝦蝦，查閱我的 NotebookLM 有什麼」
+
+:::note
+首次使用需要登入 Google 帳號進行 NotebookLM 綁定。登入後即可透過聊天直接操作。
+:::
