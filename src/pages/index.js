@@ -161,11 +161,7 @@ export default function Home() {
           <p style={{ textAlign: 'center', color: 'var(--ifm-color-emphasis-600)', marginBottom: '2rem' }}>
             最新的三個應用場景
           </p>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1.2rem',
-          }}>
+          <div className="highlights-grid">
             {highlights.map((h) => (
               <HighlightCard key={h.title} {...h} />
             ))}
