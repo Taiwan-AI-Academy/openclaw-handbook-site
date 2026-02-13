@@ -5,42 +5,43 @@ import { ChatDemo, ChatBubble } from '../components/ChatBubble';
 
 const highlights = [
   {
-    title: '💻 課程網站建置',
-    path: '/docs/development/course-website',
+    title: '💒 互動喜帖網頁',
+    path: '/docs/development/wedding-card',
     tag: '開發',
     platform: 'gchat',
     chat: [
-      { from: 'user', text: '幫我用這份 Google Doc 建課程網站' },
-      { from: 'bot', text: '完成了！八大區塊全部照原文放進去，設計風格不動 ✅' },
+      { from: 'user', text: '幫我做一個互動式電子喜帖網頁，要有信封打開的動畫效果' },
+      { from: 'bot', text: '完成了！信封飛入動畫、翻蓋打開、喜帖升起翻轉、花瓣特效、RSVP 表單全都有 ✅' },
     ],
   },
   {
-    title: '🎙️ 會議錄影自動轉錄',
-    path: '/docs/automation/meeting-transcription',
-    tag: '自動化',
+    title: '📝 社群貼文撰寫',
+    path: '/docs/communication/social-media-post',
+    tag: '通訊',
     platform: 'gchat',
     chat: [
-      { from: 'bot', text: '📝 會議記錄整理好了！Google Doc 連結已送出，含 8 項行動項目。' },
+      { from: 'user', text: '幫我寫一篇 FB 貼文，介紹我們團隊用 AI 助手的實際案例' },
+      { from: 'bot', text: '幫你寫好了！涵蓋行事曆提醒、會議記錄、輿情監控等場景，要調整語氣長度跟我說！' },
     ],
   },
   {
-    title: '📰 科技新聞摘要',
-    path: '/docs/information/news-summary',
+    title: '🔒 技術文件安全審查',
+    path: '/docs/information/security-review',
     tag: '資訊',
     platform: 'gchat',
     chat: [
-      { from: 'user', text: '摘要一下 Chrome WebMCP 早期預覽' },
-      { from: 'bot', text: '簡單說：以後網站不只給人看，也給 AI 用 🤖🌐' },
+      { from: 'user', text: '幫我看一下這份教學文件，安全性有沒有什麼問題？' },
+      { from: 'bot', text: '看完了！高風險 3 項、中風險 2 項、建議補充 2 項，已按風險等級整理好。' },
     ],
   },
 ];
 
 const categories = [
   { name: 'Google Workspace', icon: '🔧', count: 4, desc: 'OAuth 授權、Sheets 讀取、行事曆提醒、Gmail 自動回覆', path: '/docs/category/-google-workspace' },
-  { name: '資訊查詢', icon: '📡', count: 4, desc: '天氣交通、生命靈數、食譜、新聞摘要', path: '/docs/category/-資訊查詢' },
+  { name: '資訊查詢', icon: '📡', count: 5, desc: '天氣交通、生命靈數、食譜、新聞摘要、安全審查', path: '/docs/category/-資訊查詢' },
   { name: '自動化', icon: '⚡', count: 7, desc: '輿情監控、會議轉錄、NotebookLM、排程任務', path: '/docs/category/-自動化' },
-  { name: '開發', icon: '💻', count: 1, desc: '課程網站建置', path: '/docs/category/-開發' },
-  { name: '通訊', icon: '💬', count: 2, desc: 'LINE 語音訊息、跨平台溝通', path: '/docs/category/-通訊' },
+  { name: '開發', icon: '💻', count: 2, desc: '課程網站建置、互動喜帖網頁', path: '/docs/category/-開發' },
+  { name: '通訊', icon: '💬', count: 3, desc: 'LINE 語音訊息、跨平台溝通、社群貼文撰寫', path: '/docs/category/-通訊' },
   { name: '娛樂', icon: '🎮', count: 1, desc: 'LINE 五子棋對戰遊戲', path: '/docs/category/-娛樂' },
 ];
 

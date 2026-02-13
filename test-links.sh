@@ -70,6 +70,11 @@ check "/docs/ai-adoption/aia-adoption-plan"
 check "/docs/ai-adoption/iso27001-ai"
 check "/docs/ai-adoption/workplace-tools-2026"
 
+# 2026-02-13
+check "/docs/development/wedding-card"
+check "/docs/communication/social-media-post"
+check "/docs/information/security-review"
+
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━"
 echo "✅ Pass: $PASS  ❌ Fail: $FAIL"

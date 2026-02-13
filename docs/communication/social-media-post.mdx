@@ -1,0 +1,42 @@
+---
+sidebar_label: 社群貼文撰寫
+title: 社群媒體貼文撰寫
+tags: [通訊]
+---
+
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+## 社群媒體貼文撰寫
+
+**日期**：2026-02-13  
+**需求者**：課程同仁  
+**平台**：Google Chat
+
+### 情境
+
+同仁想要在 Facebook 發佈一篇介紹團隊 AI 助手實際應用的貼文，需要蝦蝦幫忙撰寫並反覆調整到滿意。
+
+### 過程
+
+1. 同仁提出需求：寫一篇 FB 貼文介紹 AI 助手在團隊中的實際應用
+2. 蝦蝦根據真實案例撰寫初稿，涵蓋行事曆提醒、會議記錄自動化、輿情監控、課程網站建置等應用場景
+3. 同仁要求濃縮版本，蝦蝦提供精簡版
+4. 同仁要求折衷版（不要太長也不要太短），蝦蝦調整篇幅和格式
+5. 同仁要求去掉 emoji，蝦蝦修改為使用「▍」分隔符號的乾淨排版
+
+### 結果
+
+產出一篇風格專業、內容紮實的 Facebook 貼文，包含多個真實應用場景介紹和應用手冊連結，經過多次修改符合同仁的偏好。
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">幫我寫一篇 FB 貼文，介紹我們團隊用 AI 助手的實際案例</ChatBubble>
+  <ChatBubble from="bot">幫你寫了一篇 FB 貼文！涵蓋行事曆提醒、會議記錄自動化、輿情監控、課程網站建置等場景。要調整語氣、長度或內容跟我說！</ChatBubble>
+  <ChatBubble from="user">太長了，濃縮一下</ChatBubble>
+  <ChatBubble from="bot">濃縮版出來了！精簡到幾個重點場景，配上應用手冊連結。這樣OK嗎？</ChatBubble>
+  <ChatBubble from="user">emoji 拿掉</ChatBubble>
+  <ChatBubble from="bot">修改版出來了，改用「▍」分隔符號，風格更乾淨專業。這版如何？</ChatBubble>
+</ChatDemo>
+
+**適合場景**：撰寫 Facebook、LinkedIn 等社群貼文，支援多次來回修改、調整語氣長度、去掉或加上 emoji 等。蝦蝦會根據你的反饋持續調整到滿意為止。
