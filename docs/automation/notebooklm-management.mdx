@@ -3,6 +3,8 @@ sidebar_label: NotebookLM 多使用者管理
 title: NotebookLM 多使用者管理
 ---
 
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
 ## 建立 NotebookLM 多使用者隔離機制
 
 **日期**：2026-02-12
@@ -30,9 +32,14 @@ title: NotebookLM 多使用者管理
 
 ### 使用方式
 
-> 「蝦蝦，列出我的 NotebookLM notebooks」
-> 「蝦蝦，幫我刪除那個『XXX』notebook」
-> 「蝦蝦，查閱我的 NotebookLM 有什麼」
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">蝦蝦，列出我的 NotebookLM notebooks</ChatBubble>
+  <ChatBubble from="bot">{`你的 NotebookLM 目前有以下 notebooks：\n\n1. 📓 AI 產品經理課程筆記\n2. 📓 2026 Q1 專案規劃\n3. 📓 技術文件整理\n\n需要查閱或刪除哪一個嗎？`}</ChatBubble>
+</ChatDemo>
+
+也可以說：
+- 「蝦蝦，幫我刪除那個『XXX』notebook」
+- 「蝦蝦，查閱我的 NotebookLM 有什麼」
 
 :::note
 首次使用需要登入 Google 帳號進行 NotebookLM 綁定。登入後即可透過聊天直接操作。

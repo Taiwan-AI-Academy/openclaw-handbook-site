@@ -3,6 +3,8 @@ sidebar_label: 課程網站建置
 title: 課程網站建置（AIPM Bootcamp）
 ---
 
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
 ## 從 Google Doc 到完整課程網站
 
 **日期**：2026-02-12
@@ -33,6 +35,11 @@ title: 課程網站建置（AIPM Bootcamp）
 
 ### 使用方式
 
-> 「蝦蝦，幫我用這份 Google Doc 的內容建一個課程網站」
-> 「蝦蝦，把這個網站的 Hero 標題換成這張 SVG logo」
-> 「蝦蝦，參考 A 網站的設計，幫 B 網站做類似的版面」
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">蝦蝦，幫我用這份 Google Doc 的內容建一個課程網站</ChatBubble>
+  <ChatBubble from="bot">收到！我來讀取 Google Doc 的內容，然後對應到網站模板的各個區塊。包含 Hero 區塊、課程介紹、課程對象、課程特色、課程效益、八週課程表、行前準備和報名資訊，所有內容會一字不漏搬入，設計風格維持深藍+金色主題。完成後我會用瀏覽器預覽確認，再 commit 並 push 到 Git 🚀</ChatBubble>
+</ChatDemo>
+
+也可以說：
+- 「蝦蝦，把這個網站的 Hero 標題換成這張 SVG logo」
+- 「蝦蝦，參考 A 網站的設計，幫 B 網站做類似的版面」

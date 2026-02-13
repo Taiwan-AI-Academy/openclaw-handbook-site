@@ -3,6 +3,8 @@ sidebar_label: 科技新聞摘要
 title: 科技新聞摘要
 ---
 
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
 ## 快速掌握科技新聞重點
 
 **日期**：2026-02-12
@@ -32,9 +34,14 @@ title: 科技新聞摘要
 
 ### 使用方式
 
-> 「蝦蝦，摘要一下這篇 [新聞標題/連結]」
-> 「蝦蝦，這個技術是什麼？幫我用白話解釋」
-> 「蝦蝦，幫我整理這則新聞的重點」
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">Chrome 開放 WebMCP 早期預覽，網站可把功能公開成 AI 代理工具 — 這是什麼？</ChatBubble>
+  <ChatBubble from="bot">{`📰 **WebMCP 摘要**\n\n**是什麼？** Google Chrome 推出 WebMCP 協議，讓網站可以把自己的功能（如查價格、訂機票、看行事曆）公開為標準化的 AI 工具介面。\n\n**怎麼運作？** 網站在自己的頁面上宣告「我提供這些功能」，AI 代理（如 Claude、Gemini）就能直接呼叫，不需要額外串接 API。\n\n**應用場景：** 電商網站讓 AI 幫你比價下單、行事曆讓 AI 直接幫你排會議、銀行讓 AI 查餘額轉帳。\n\n**重點意義：** 這可能改變整個 Web 生態 — 從「人用瀏覽器操作網站」變成「AI 代理直接跟網站互動」。\n\n**目前狀態：** 早期預覽階段，Chrome 開發團隊正在收集回饋。\n\n一句話總結：網站從「給人看的介面」進化成「給 AI 用的工具箱」🧰`}</ChatBubble>
+</ChatDemo>
+
+也可以說：
+- 「蝦蝦，摘要一下這篇 [新聞連結]」
+- 「蝦蝦，這個技術是什麼？幫我用白話解釋」
 
 :::tip
 可以直接貼新聞連結或標題，蝦蝦會自動搜尋並整理摘要。適合在群組中快速分享知識。

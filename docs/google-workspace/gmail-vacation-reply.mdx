@@ -3,6 +3,8 @@ sidebar_label: Gmail 休假自動回覆
 title: Gmail 休假自動回覆設定
 ---
 
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
 ## 用對話設定 Gmail 自動回覆
 
 **日期**：2026-02-12
@@ -30,9 +32,14 @@ title: Gmail 休假自動回覆設定
 
 ### 使用方式
 
-> 「蝦蝦，幫我設定 Gmail 休假自動回覆，2/13 到 2/22」
-> 「蝦蝦，取消我的 Gmail 自動回覆」
-> 「蝦蝦，幫我寫一段中英文的休假自動回覆」
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">蝦蝦，幫我設定 Gmail 休假自動回覆，2/13 到 2/22</ChatBubble>
+  <ChatBubble from="bot">{`好的！我先草擬一份中英文的休假自動回覆：\n\n中文：感謝您的來信。我目前正在休假中（2/13-2/22），將於 2/23 回覆您的郵件。\n\nEnglish: Thank you for your email. I am currently on leave (Feb 13-22) and will respond after Feb 23.\n\n確認內容 OK 的話，我就直接透過 Gmail API 幫你設定囉！`}</ChatBubble>
+</ChatDemo>
+
+也可以說：
+- 「蝦蝦，取消我的 Gmail 自動回覆」
+- 「蝦蝦，幫我寫一段中英文的休假自動回覆」
 
 :::note
 需要先完成 Google OAuth 授權（Gmail 權限），蝦蝦才能操作你的 Gmail 設定。

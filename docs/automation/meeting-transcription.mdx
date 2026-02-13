@@ -3,6 +3,8 @@ sidebar_label: 會議錄影自動轉錄
 title: Google Meet 會議錄影自動轉錄
 ---
 
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
 ## 自動偵測錄影並產生會議記錄
 
 **日期**：2026-02-12
@@ -35,8 +37,12 @@ title: Google Meet 會議錄影自動轉錄
 
 ### 使用方式
 
-> 「蝦蝦，幫我把 Drive 裡的會議錄影轉成會議記錄」
-> 「蝦蝦，設定自動會議記錄，有新錄影就自動處理」
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">蝦蝦，幫我把 Drive 裡的會議錄影轉成會議記錄</ChatBubble>
+  <ChatBubble from="bot">好的！我來處理。流程是：從 Drive 下載錄影檔 → 轉成音檔 → 用 Whisper 語音辨識轉錄為中文文字 → 整理成結構化會議記錄（議題、討論要點、行動項目）→ 建立 Google Doc 存到會議記錄資料夾。完成後會把 Doc 連結傳給你 📝</ChatBubble>
+</ChatDemo>
+
+也可以說「蝦蝦，設定自動會議記錄，有新錄影就自動處理」來啟用定時自動化。
 
 :::tip
 只要把錄影檔放到指定的 Drive 資料夾，蝦蝦就會自動偵測並處理，不需要手動觸發。
