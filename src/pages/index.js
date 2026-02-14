@@ -5,6 +5,16 @@ import { ChatDemo, ChatBubble } from '../components/ChatBubble';
 
 const highlights = [
   {
+    title: '🎬 課程宣傳影片製作',
+    path: '/docs/development/promo-video',
+    tag: '開發',
+    platform: 'gchat',
+    chat: [
+      { from: 'user', text: '幫我做一支課程宣傳影片，40 秒左右，要有動態效果和背景音樂' },
+      { from: 'bot', text: 'V2 完成 ✅ 加入更多知識亮點、加快節奏、新增背景音樂，6 段場景結構完整！' },
+    ],
+  },
+  {
     title: '💒 互動喜帖網頁',
     path: '/docs/development/wedding-card',
     tag: '開發',
@@ -24,23 +34,13 @@ const highlights = [
       { from: 'bot', text: '幫你寫好了！涵蓋行事曆提醒、會議記錄、輿情監控等場景，要調整語氣長度跟我說！' },
     ],
   },
-  {
-    title: '🔒 技術文件安全審查',
-    path: '/docs/information/security-review',
-    tag: '資訊',
-    platform: 'gchat',
-    chat: [
-      { from: 'user', text: '幫我看一下這份教學文件，安全性有沒有什麼問題？' },
-      { from: 'bot', text: '看完了！高風險 3 項、中風險 2 項、建議補充 2 項，已按風險等級整理好。' },
-    ],
-  },
 ];
 
 const categories = [
   { name: 'Google Workspace', icon: '🔧', count: 4, desc: 'OAuth 授權、Sheets 讀取、行事曆提醒、Gmail 自動回覆', path: '/docs/category/-google-workspace' },
   { name: '資訊查詢', icon: '📡', count: 5, desc: '天氣交通、生命靈數、食譜、新聞摘要、安全審查', path: '/docs/category/-資訊查詢' },
   { name: '自動化', icon: '⚡', count: 7, desc: '輿情監控、會議轉錄、NotebookLM、排程任務', path: '/docs/category/-自動化' },
-  { name: '開發', icon: '💻', count: 2, desc: '課程網站建置、互動喜帖網頁', path: '/docs/category/-開發' },
+  { name: '開發', icon: '💻', count: 3, desc: '課程網站建置、互動喜帖網頁、宣傳影片製作', path: '/docs/category/-開發' },
   { name: '通訊', icon: '💬', count: 3, desc: 'LINE 語音訊息、跨平台溝通、社群貼文撰寫', path: '/docs/category/-通訊' },
   { name: '娛樂', icon: '🎮', count: 1, desc: 'LINE 五子棋對戰遊戲', path: '/docs/category/-娛樂' },
 ];

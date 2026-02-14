@@ -29,9 +29,9 @@ check "/"
 # Highlight cards (3) - these change as new cases are added
 echo ""
 echo "⭐ Highlight cards:"
-check "/docs/development/course-website"
-check "/docs/automation/meeting-transcription"
-check "/docs/information/news-summary"
+check "/docs/development/promo-video"
+check "/docs/development/wedding-card"
+check "/docs/communication/social-media-post"
 
 # Category pages
 echo ""
@@ -74,6 +74,9 @@ check "/docs/ai-adoption/workplace-tools-2026"
 check "/docs/development/wedding-card"
 check "/docs/communication/social-media-post"
 check "/docs/information/security-review"
+
+# 2026-02-14
+check "/docs/development/promo-video"
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━"

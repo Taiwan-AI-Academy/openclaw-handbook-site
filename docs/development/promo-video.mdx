@@ -1,0 +1,58 @@
+---
+sidebar_label: 課程宣傳影片製作
+title: 課程宣傳影片製作（Remotion）
+---
+
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+## 課程宣傳影片製作
+
+**日期**：2026-02-14
+**需求者**：課程同仁
+**平台**：Google Chat
+
+### 情境
+
+團隊成員需要為即將開設的 AI PM 課程製作一支 40 秒宣傳影片，希望有專業的動態效果、品牌色系、以及背景音樂，用於社群推廣。
+
+### 過程
+
+1. **需求理解**：蝦蝦先瀏覽課程網站，擷取課程亮點、特色、時間等關鍵資訊
+2. **影片規劃**：設計 6 段場景結構：
+   - 開場衝擊（粒子動畫 + 標語）
+   - 痛點共鳴（金句依序淡入）
+   - 課程亮相（品牌大標 + 六大特色 icon）
+   - 技能展示（四大核心技能卡片逐一亮燈）
+   - 數字強調（週數 × 時數計數動畫）
+   - CTA 收尾（報名資訊 + 脈動按鈕）
+3. **程式實作**：使用 Remotion（React 影片框架）撰寫程式碼，包含：
+   - Spring 彈跳動畫、fade/slide 轉場
+   - 品牌色漸層背景（深紫→玫瑰粉）
+   - 中文字體載入（Google Fonts）
+4. **背景音樂**：搜尋並下載 CC BY 授權的免費音樂，加入 fade in/out 處理
+5. **迭代改進**：第一版完成後，根據回饋調整：
+   - 加入更多課程知識亮點
+   - 加快整體節奏
+   - 新增背景音樂
+   - 場景從 5 段擴充到 6 段
+
+### 結果
+
+成功產出 40 秒 1280×720 的 MP4 宣傳影片，包含專業動態效果、品牌視覺、背景音樂，可直接用於社群推廣。從需求到交付（含迭代）約 30 分鐘完成。
+
+### 使用方式
+
+<ChatDemo platform="gchat">
+  <ChatBubble from="user">幫我做一支課程宣傳影片，40 秒左右，要有動態效果和背景音樂</ChatBubble>
+  <ChatBubble from="bot">{"好，我先看一下課程網站擷取重點資訊，然後用 Remotion 來製作。先給你大綱：\n\nScene 1 — 開場衝擊（3 秒）：粒子動畫 +「AI 正在改寫 PM 的定義」\nScene 2 — 痛點共鳴（5 秒）：金句依序淡入\nScene 3 — 課程亮相（7 秒）：品牌大標 + 六大特色\nScene 4 — 技能展示（10 秒）：四大核心技能卡片\nScene 5 — 數字強調（5 秒）：8 週 × 48 小時計數動畫\nScene 6 — CTA 收尾（10 秒）：報名資訊 + 脈動按鈕\n\n視覺風格：深紫→玫瑰粉漸層、Noto Sans TC 粗體、spring 彈跳動畫\n\n現在開始寫程式碼⋯"}</ChatBubble>
+  <ChatBubble from="user">影片亮點不高，節奏太慢，加個背景音樂</ChatBubble>
+  <ChatBubble from="bot">{"V2 完成 ✅\n\n改進內容：\n1. 更多知識亮點 — 加入網站原文金句、特色擴充到 6 個、新增技能卡片場景\n2. 節奏加快 — 開場 4s→3s、轉場從 15 幀縮到 12 幀\n3. 背景音樂 — Kevin MacLeod \"Inspired\"（CC BY），fade in/out 處理\n\n先看看效果，需要再調可以跟我說！"}</ChatBubble>
+</ChatDemo>
+
+### 技術細節
+
+- **框架**：Remotion（React-based programmatic video）
+- **動畫**：Spring 物理動畫、interpolate 插值、TransitionSeries 場景切換
+- **字體**：透過 `@remotion/google-fonts` 載入 Noto Sans TC
+- **音訊**：透過 `@remotion/media` 的 Audio 元件加入 BGM，支援 volume 函數控制淡入淡出
+- **輸出**：1280×720 MP4，30fps，約 40 秒
