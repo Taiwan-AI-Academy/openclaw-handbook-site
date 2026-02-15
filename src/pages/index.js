@@ -5,6 +5,16 @@ import { ChatDemo, ChatBubble } from '../components/ChatBubble';
 
 const highlights = [
   {
+    title: '🌏 國際研討會議程推薦',
+    path: '/docs/information/conference-agenda',
+    tag: '資訊',
+    platform: 'line',
+    chat: [
+      { from: 'user', text: '我要去參加 AI 研討會，幾百場 sessions，幫我篩選跟 AI 教育和 Safety 相關的' },
+      { from: 'bot', text: '已篩選出 20 場推薦！按時間排序，標記⭐強烈推薦，涵蓋教育/人才/政策/Safety 五大領域 🦐' },
+    ],
+  },
+  {
     title: '🎬 課程宣傳影片製作',
     path: '/docs/development/promo-video',
     tag: '開發',

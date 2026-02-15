@@ -74,6 +74,7 @@ check "/docs/ai-adoption/workplace-tools-2026"
 check "/docs/development/wedding-card"
 check "/docs/communication/social-media-post"
 check "/docs/information/security-review"
+check "/docs/information/conference-agenda"
 
 # 2026-02-14
 check "/docs/development/promo-video"

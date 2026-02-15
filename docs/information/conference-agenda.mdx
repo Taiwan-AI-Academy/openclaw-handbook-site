@@ -1,0 +1,40 @@
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+# 國際研討會議程篩選推薦
+
+**日期**：2026-02-15
+**需求者**：團隊成員
+**平台**：LINE
+
+## 情境
+
+團隊成員即將出國參加一場大型國際 AI 研討會，議程多達數百場分散在不同場館。成員希望蝦蝦幫忙從官方網站篩選出與自己關注領域相關的場次，並按場館和時間排序整理。
+
+## 過程
+
+1. 蝦蝦透過瀏覽器開啟研討會官方網站的 Sessions 頁面
+2. 爬取所有場次資料（包含時間、場地、主題、講者、合作夥伴）
+3. 根據使用者關注的 5 大領域（AI 教育、人才培育、國家政策、AI Safety、Responsible AI）進行篩選
+4. 將符合的場次按時間順序排列，並標記強烈推薦的場次
+5. 因 LINE 推送訊息遇到限流，建議使用者改用其他通訊平台取得完整清單
+
+## 結果
+
+- 成功篩選出約 20 場高度相關的 sessions
+- 每場包含：時間、場地、主題、領域標籤、講者/機構、推薦等級
+- 使用者在出發前獲得完整的議程參考，可據此安排行程
+
+## 使用方式
+
+<ChatDemo platform="line">
+  <ChatBubble from="user">我下週要去參加一個 AI 研討會，有幾百場 sessions，幫我看一下哪些跟 AI 教育和 AI Safety 相關的</ChatBubble>
+  <ChatBubble from="bot">好的！請給我研討會的官方網站連結，以及你關注的領域，我幫你篩選整理 🦐</ChatBubble>
+  <ChatBubble from="user">https://example-summit.org/sessions 我關注：AI 教育、人才培育、國家政策、AI Safety、Responsible AI</ChatBubble>
+  <ChatBubble from="bot">📋 研討會推薦清單（按時間排序）⏰ 9:30-10:30 ▫️ Room 9 - AI and Future of Skilling [教育/人才] ⭐ ▫️ Room 14 - Safe & Trusted AI at Scale [AI Safety] ⭐ ▫️ Room 18 - Harnessing AI for Future of Learning [教育] ⭐ ⏰ 10:30-11:30 ▫️ Room 14 - AI Literacy: Building Skills [教育] ⭐ ▫️ Room 18 - Building Future-Ready Workforce [人才培育] ⭐ ...共篩選出 20 場推薦 ⭐ = 強烈推薦 🦐</ChatBubble>
+</ChatDemo>
+
+### 進階用法
+
+- 可指定按「場館」或「時間」排序
+- 可限定特定時段（如只看上午場）
+- 可請蝦蝦針對特定場次提供更詳細的介紹
