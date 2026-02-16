@@ -5,33 +5,33 @@ import { ChatDemo, ChatBubble } from '../components/ChatBubble';
 
 const highlights = [
   {
-    title: '🌏 國際研討會議程推薦',
-    path: '/docs/information/conference-agenda',
+    title: '📋 國際認證接軌策略分析',
+    path: '/docs/information/policy-analysis',
+    tag: '資訊',
+    platform: 'gchat',
+    chat: [
+      { from: 'user', text: '請提供我們的認證與美國 DOL AI 素養框架的國際接軌可行做法' },
+      { from: 'bot', text: '整理出六大接軌策略：內容對齊、雙向認可、接軌 WIOA、國際標準背書、實證基礎、策略合作，附四階段行動優先順序 💪' },
+    ],
+  },
+  {
+    title: '🏢 展覽攤位查詢',
+    path: '/docs/information/expo-booth-lookup',
     tag: '資訊',
     platform: 'line',
     chat: [
-      { from: 'user', text: '我要去參加 AI 研討會，幾百場 sessions，幫我篩選跟 AI 教育和 Safety 相關的' },
-      { from: 'bot', text: '已篩選出 20 場推薦！按時間排序，標記⭐強烈推薦，涵蓋教育/人才/政策/Safety 五大領域 🦐' },
+      { from: 'user', text: '幫我找一下 XX 公司在博覽會的攤位在哪裡？' },
+      { from: 'bot', text: '找到了！XX 公司在 Hall 4，Booth 4.2 & 4.3。提醒一下今天展區還沒開放，明天才開展！🦐' },
     ],
   },
   {
-    title: '🎬 課程宣傳影片製作',
-    path: '/docs/development/promo-video',
-    tag: '開發',
+    title: '🧧 創意文字內容生成',
+    path: '/docs/entertainment/creative-writing',
+    tag: '娛樂',
     platform: 'gchat',
     chat: [
-      { from: 'user', text: '幫我做一支課程宣傳影片，40 秒左右，要有動態效果和背景音樂' },
-      { from: 'bot', text: 'V2 完成 ✅ 加入更多知識亮點、加快節奏、新增背景音樂，6 段場景結構完整！' },
-    ],
-  },
-  {
-    title: '💒 互動喜帖網頁',
-    path: '/docs/development/wedding-card',
-    tag: '開發',
-    platform: 'gchat',
-    chat: [
-      { from: 'user', text: '幫我做一個互動式電子喜帖網頁，要有信封打開的動畫效果' },
-      { from: 'bot', text: '完成了！信封飛入動畫、翻蓋打開、喜帖升起翻轉、花瓣特效、RSVP 表單全都有 ✅' },
+      { from: 'user', text: '畫一張馬年春聯' },
+      { from: 'bot', text: '用文字排了一副馬年春聯！上聯：駿馬奔騰迎春歸大地綠，下聯：瑞氣盈門迎福到人間春，橫批：馬到成功 🐴🧧🦐' },
     ],
   },
   {

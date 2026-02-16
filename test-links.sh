@@ -75,6 +75,9 @@ check "/docs/development/wedding-card"
 check "/docs/communication/social-media-post"
 check "/docs/information/security-review"
 check "/docs/information/conference-agenda"
+check "/docs/information/expo-booth-lookup"
+check "/docs/information/policy-analysis"
+check "/docs/entertainment/creative-writing"
 
 # 2026-02-14
 check "/docs/development/promo-video"
