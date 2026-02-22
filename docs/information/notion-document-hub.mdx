@@ -1,0 +1,59 @@
+---
+sidebar_label: Notion 文件資料庫管理
+title: Notion 文件資料庫管理
+---
+
+import { ChatDemo, ChatBubble } from '@site/src/components/ChatBubble';
+
+## 用對話收錄文件到 Notion 知識庫
+
+**日期**：2026-02-22
+**需求者**：團隊成員
+**平台**：LINE
+
+### 情境
+
+團隊成員在閱讀 AI 治理相關文件時，希望將重要文獻收錄到團隊的 Notion 文件資料庫中。文件包含網頁文章和 PDF 檔案，需要結構化摘要、關鍵字標記和雙語筆記。
+
+### 過程
+
+1. 使用者透過 LINE 傳送文件 URL 給蝦蝦
+2. 蝦蝦自動開啟連結，讀取文件全文內容
+3. 針對 PDF 檔案，蝦蝦會下載並解析全文
+4. 蝦蝦整理出結構化筆記，包含：
+   - 中英文摘要
+   - 核心概念解析
+   - 應用場景列舉
+   - 關鍵挑戰分析
+5. 透過 Notion API 自動建立頁面，包含：
+   - 標題、來源網址
+   - 來源機構（Source）
+   - 文件類型（Type）
+   - 關鍵字標籤（Keywords）
+   - 完整結構化筆記內容
+
+### 結果
+
+- 文件自動收錄至 Notion 資料庫，具備完整的分類標籤和結構化筆記
+- 支援多種文件格式（網頁、PDF）
+- 每篇文件包含中英雙語摘要，方便團隊成員快速理解
+- 關鍵字標籤便於後續搜尋和篩選
+
+### 使用方式
+
+<ChatDemo platform="line">
+  <ChatBubble from="user">{"請加入這篇到 Notion 文件資料庫中\nhttps://example.com/ai-governance-report.pdf"}</ChatBubble>
+  <ChatBubble from="bot">{"已加入 Notion ✅\n\n📄 AI Governance Report: Framework for Responsible AI\n- 來源：Example Institute\n- 類型：Research Report (2026/01, 42頁)\n- 關鍵字：AI Governance, Responsible AI, Policy Framework\n\n內容包含：摘要、核心概念、架構原則、應用場景、關鍵挑戰等結構化筆記 🦐"}</ChatBubble>
+</ChatDemo>
+
+<ChatDemo platform="line">
+  <ChatBubble from="user">{"還有這篇也是\nhttps://example.com/another-article"}</ChatBubble>
+  <ChatBubble from="bot">{"這篇跟剛才收錄的是同一篇喔！都是同一個文件，只是網址參數不同。\n\n已經在 Notion 裡了 👉 AI Governance Report\n\n有其他文件要加嗎？🦐"}</ChatBubble>
+</ChatDemo>
+
+:::tip 小提示
+- 傳送 URL 即可，蝦蝦會自動判斷文件格式並讀取內容
+- PDF 檔案會自動下載解析全文
+- 如果傳了重複的文件，蝦蝦會提醒你已經收錄過了
+- 每篇文件都會產生中英雙語的結構化筆記
+:::

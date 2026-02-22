@@ -5,6 +5,16 @@ import { ChatDemo, ChatBubble } from '../components/ChatBubble';
 
 const highlights = [
   {
+    title: '📚 Notion 文件資料庫管理',
+    path: '/docs/information/notion-document-hub',
+    tag: '資訊',
+    platform: 'line',
+    chat: [
+      { from: 'user', text: '請加入這篇到 Notion 文件資料庫中\nhttps://example.com/ai-report.pdf' },
+      { from: 'bot', text: '已加入 Notion ✅\n📄 AI Governance Report\n來源：Research Institute\n關鍵字：AI Governance, Policy Framework\n內容包含結構化筆記 🦐' },
+    ],
+  },
+  {
     title: '📋 國際認證接軌策略分析',
     path: '/docs/information/policy-analysis',
     tag: '資訊',
@@ -22,16 +32,6 @@ const highlights = [
     chat: [
       { from: 'user', text: '幫我找一下 XX 公司在博覽會的攤位在哪裡？' },
       { from: 'bot', text: '找到了！XX 公司在 Hall 4，Booth 4.2 & 4.3。提醒一下今天展區還沒開放，明天才開展！🦐' },
-    ],
-  },
-  {
-    title: '🧧 創意文字內容生成',
-    path: '/docs/entertainment/creative-writing',
-    tag: '娛樂',
-    platform: 'gchat',
-    chat: [
-      { from: 'user', text: '畫一張馬年春聯' },
-      { from: 'bot', text: '用文字排了一副馬年春聯！上聯：駿馬奔騰迎春歸大地綠，下聯：瑞氣盈門迎福到人間春，橫批：馬到成功 🐴🧧🦐' },
     ],
   },
   {

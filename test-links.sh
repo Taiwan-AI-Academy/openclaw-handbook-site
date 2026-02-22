@@ -77,6 +77,7 @@ check "/docs/information/security-review"
 check "/docs/information/conference-agenda"
 check "/docs/information/expo-booth-lookup"
 check "/docs/information/policy-analysis"
+check "/docs/information/notion-document-hub"
 check "/docs/entertainment/creative-writing"
 
 # 2026-02-14
